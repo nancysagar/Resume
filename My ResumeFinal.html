@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <style>
+        .intro{
+            text-align: center;
+        }
+        a{
+            color:blue;
+            text-decoration: none;
+
+        }
+        .separator {
+            align-self: center;
+            width:98%;
+            border-top: 2px solid #000; /* You can adjust the thickness and color as needed */
+            margin: 20px 0; /* Adjust margin according to your layout */
+        }
+        .right{
+            float:right;
+            margin-right: 5%;
+        }
+        .left{
+            float:left;
+            margin-left:1%;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            bottom: 0;
+            left:0;
+            width: 100%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        function redirectToGitHub1() {
+            window.location.href="https://github.com/nancysagar/Resume";
+        }
+        function redirectToGitHub() {
+            window.location.href="https://github.com/Nancy-2002/AssignmentRepo";
+        }
+        function convertButtonsToLinks() {
+            var githubButtons = document.querySelectorAll('.github-button');
+            githubButtons.forEach(button => {
+                var link = document.createElement('a');
+                link.href = button.getAttribute('data-url');
+                link.innerHTML = button.innerHTML;
+                link.target = '_blank';
+                button.parentNode.replaceChild(link, button);
+            });
+        }
+
+        function downloadResumeAsPDF() {
+            convertButtonsToLinks(); // Convert buttons to links before downloading as PDF
+            const element = document.body;
+            html2pdf()
+                .from(element)
+                .save();
+        }
+    </script>
+</head>
+<body>
+    <div class="intro">
+        <h1>Nancy Sagar</h1>
+        <small><a href="mailto:nancysagat4726@gmail.com"> Email&nbsp;</a>|&nbsp;
+               <a href="https://www.linkedin.com/in/nancy-sagar-9b7529204/" target="_blank">LinkedIn&nbsp;</a>|&nbsp;
+               <a href="https://github.com/Nancy-2002" target="_blank"> GitHub&nbsp;</a>|&nbsp;
+               <a href="https://www.hackerrank.com/profile/20cse065" target="_blank">HackerRank&nbsp;</a>|&nbsp;
+               <a href="https://leetcode.com/NancySagar/" target="_blank">LeetCode</a>
+        </small>
+    </div>
+    
+    <div>
+        <section>
+            <h3>EDUCATION</h3>
+            <div class="separator"></div>
+            <ul>
+                <li>
+                <strong>Government Women Engineering College Ajmer</strong>
+                <em class="right">Dec’20 - Present</em><br>
+                Bachelor of Technology in Computer Science Engineering
+                <div class="right"><mark>CGPA: 9.16</mark></div>
+                </li><br>
+                <li>
+                <strong>Sophia Sr. Sec. School, Ajmer</strong>
+                <em class="right">Apr’16 - Apr’20</em><br>
+                <strong>12th</strong>: 82.8% (PCMB)<br>
+                <strong>10th</strong>: 86.4%
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>SKILLS</h3>
+            <div class="separator"></div>
+            <ul>
+                <li><strong>Technical Skills:</strong> Python (1+ year), Java (1+ year), C/C++ (2+ years), HTML (1+ year), CSS (1+ year), SQL (1+ year)</li>
+                <li><strong>Functional Skills:</strong> Agile, Git/Github, Data Structures, Object Oriented Programming, Database Management System, Spring, Maven, VS Code</li>
+                <li><strong>Soft Skills:</strong> Collaboration, Task Prioritisation, Effective Communication, Adaptability</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>EXPERIENCE</h3>
+            <div class="separator"></div>
+            <ul>
+                <li>
+                <strong>Target - Remote- Mentee</strong><em class="right">Apr' 23 - Present</em>
+                <ul>
+                    <li><mark>Implemented JAVA, Databases, and Backend Development skills</mark></li>
+                    <li>Collaborated with a team of 4 to create a high-performing API, handling a significant volume of requests daily.</li>
+                    <li>Achieved a notable reduction in manual user management tasks, improving operational efficiency.</li>
+                    <li>Improved project delivery time significantly through effective delegation and coordination.</li>
+                </ul>
+                </li>
+                <li><br>
+                <strong>Upskill Campus - Remote- Python intern</strong> <em class="right">Jun' 23 - Jul' 23</em>
+                <ul>
+                    <li>Developed a web-based URL shortener application, reducing URL length by 50% to 75%.</li>
+                    <li>Reduced development time by leveraging existing libraries and frameworks.</li>
+                </ul>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section>
+            <h3>PROJECTS</h3>
+            <div class="separator"></div>
+            <ul>
+                <li>
+                    <strong>Resume Web Page</strong> <em class="right"> Mar' 24</em>
+                    <ul>Designed responsive web page with HTML/CSS.</ul>
+                    <button class="right github-button" data-url="https://github.com/nancysagar/Resume" onclick="redirectToGitHub1()">Github Link</button>
+                    <ul>Utilized JavaScript for interactive elements.</ul>
+                    <ul>Utilized lists, buttons, and links creatively</ul>
+                </li>
+                <li>
+                <strong>Employee Management System</strong> <em class="right">Apr' 23 - May' 23</em>
+                <ul>
+                    <li>Enhanced Employee Management system with add/delete employee functionalities</li>
+                    <button class="right github-button" data-url="https://github.com/Nancy-2002/AssignmentRepo" onclick="redirectToGitHub()">Github Link</button>
+                    <li>Integrated a database managing data for over 2000 employees</li>
+                    <li>Implemented <mark>Exception handling</mark> for robustness, resulting in a significant increase in efficiency.</li>
+                </ul>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section>
+            <h3>ACHIEVEMENTS</h3>
+            <div class="separator"></div>
+            <ul>
+                <li><mark><strong>AIR 6031  in GATE(CS) 2024</strong></mark></li><em class="right"><a href="https://drive.google.com/file/d/1fSfqnRconbH-VdxsTEULldVxFLqp91yx/view?usp=sharing">My Report</a></em>
+                <li><strong>NPTEL Star Certificate</strong> — Recognized as a regular learner completed 5 courses with more than 60%</li><em class="right"><a href="https://drive.google.com/file/d/1oqFY9_CFZ_PAEb3y2Z9-NRa1bzbSEyaD/view?usp=sharing">Star Certificate</a></em>
+                <li><strong>AICTE Pragati Scholarship</strong> — Awarded to females gaining good grades in tech backgrounds</li>
+                <li><strong>Swayam Learner</strong> -Completed multiple courses under NPTEL Swayam </li><em class="right"><a href="https://drive.google.com/drive/folders/1lB0H4g3S4K9eTEOHM2KQt5leXPU69T1q?usp=sharing">My Certificates</a></em>
+            </ul>
+        </section>
+
+        <section>
+            <h3>HOBBIES</h3>
+            <div class="separator"></div>
+            <p>Sketching | Reading | Cooking</p> 
+        </section>
+    </div>
+    <br>  
+    <footer>
+        <button class="left" onclick="downloadResumeAsPDF()">Download Resume</button>
+        <strong>Note : </strong> Crafted with care by Nancy Sagar to foster learning and professionalism.
+    </footer>
+</body>
+</html>
